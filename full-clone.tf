@@ -17,7 +17,7 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     clone = "Win10-pknowles2"
 
     # VM System Settings
-    agent = 1
+    #agent = 1
     
     # VM CPU Settings
     cores = 2
@@ -41,7 +41,7 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     }    
 
     # VM Cloud-Init Settings
-    #os_type = "cloud-init"
+    os_type = "cloud-init"
 
     # (Optional) IP Address and Gateway
     # ipconfig0 = "ip=0.0.0.0/0,gw=0.0.0.0"
