@@ -34,11 +34,11 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     }
 
     # VM Disk Settings
-    disk {
-        storage = "local-lvm"
-        type  = "virtio"
-        size = "75G"
-    }    
+    #disk {
+    #    storage = "local-lvm"
+    #    type  = "virtio"
+    #    size = "75G"
+    #}    
 
     # VM Cloud-Init Settings
     os_type = "cloud-init"
