@@ -14,7 +14,7 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     onboot = true 
 
     # VM OS Settings
-    clone = "107"
+    clone = "Win10-pknowles2"
 
     # VM System Settings
     agent = 1
