@@ -6,7 +6,7 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     
     # VM General Settings
     target_node = "proxmox1"
-    vmid = "107"
+    vmid = "120
     name = "srv_demo_1"
     desc = "TF deploy testing"
 
@@ -14,7 +14,7 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     onboot = true 
 
     # VM OS Settings
-    #clone = "WIN10-pknowles2"
+    clone = "107"
 
     # VM System Settings
     agent = 1
