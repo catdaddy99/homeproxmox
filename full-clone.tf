@@ -34,14 +34,14 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     }
 
     # VM Disk Settings - Boot Drive
-    disk {
+    disks {
         storage = "local-lvm"
         type  = "virtio"
         size = "75G"
     }    
 
     # VM Disk Settings - Data Drive
-    disk {
+    disks {
         storage = "abc"
         type  = "virtio"
         size = "20G"
