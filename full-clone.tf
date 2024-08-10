@@ -6,8 +6,8 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     
     # VM General Settings
     target_node = "proxmox1"
-    vmid = "401"
-    name = "srv-demo-2"
+    vmid = "400"
+    name = "srv-demo-1"
     desc = "TF deploy testing"
 
     # VM Advanced General Settings
