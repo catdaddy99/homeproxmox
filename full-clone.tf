@@ -5,7 +5,7 @@ resource "proxmox_lxc" "basic" {
   ostemplate   = "local:vztmpl/ubuntu-23.04-standard_23.04-1_amd64.tar.zst"
   password     = "B00TY"
   unprivileged = true
-  nameserver = "10.77.2.10"
+  nameserver = "10.77.2.10 10.77.2.11"
   memory = "128"
   swap = "128"
   cores = "2"
