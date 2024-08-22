@@ -6,7 +6,8 @@ resource "proxmox_lxc" "basic" {
   password     = "B00TY"
   unprivileged = true
   nameserver = "10.77.2.10"
-  
+  gw = "10.77.2.1"
+
   ssh_public_keys = <<-EOT
     ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCMkgkhLNF6VrYTGJl9ZrHfFhlzfJggvJDUXdDxrk4g5YM4rvt0hcRGUZzzwC8S02+LPzGwgtl7xax8BsT4OJ2yR3nU86Lk3KvntqqrNTNLycPOjcdEbLSW4Ba7mRTDZSjxtV6oFftfG+iNDFFeASwHFVeIy1yUK1tYQvvawaIqIM3xoiD82vAl0DkNm6r/XF0GhxtFNGYKhPVztM8iyOlDuphLkWbr07bnovEi7p90OvDRmnF+7To1yb4EjuDQb0OMvgSoAhvMQ7koqkrJxWrBRM5HfJ4dKS9A58qH+eOzXUk3/eBYHfc6c1wJEMzir9meru7xYaFfEi24adZQ0wWUlp41JXenWd0VKeiOlz1bZmcgRn53UlXq8M9j37WSP0dwIZ0dnlwr6WShTFm58CL2H5vJTSXzucGRqHqtZKsHr/Jf3UX0kSCxQlPXRE04GbCh9n2aVfM98gidm75ug0wJ0mx5TRjrEuZ9gXZyPbz1SRqRJ3L8CmaTfD+UBre9mHM= tfuser@ansible
   EOT  
