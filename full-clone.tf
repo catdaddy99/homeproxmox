@@ -6,6 +6,7 @@ resource "proxmox_lxc" "basic" {
   password     = "B00TY"
   unprivileged = true
   nameserver = "10.77.2.10"
+  memory = "128"
 
 
   ssh_public_keys = <<-EOT
