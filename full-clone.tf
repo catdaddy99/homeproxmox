@@ -6,6 +6,7 @@ resource "proxmox_lxc" "basic" {
   password     = "B00TY"
   unprivileged = true
   nameserver = "10.77.2.10 10.77.2.11"
+  searchdomain = "weknowles.com"
   memory = "128"
   swap = "128"
   cores = "2"
