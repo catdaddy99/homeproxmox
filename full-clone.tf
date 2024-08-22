@@ -1,3 +1,27 @@
+
+resource "proxmox_lxc" "basic" {
+  target_node  = "proxmox1"
+  hostname     = "lxc-basic"
+  ostemplate   = "local:ubuntu-23.04-standard_23.04-1_amd64.tar.zst"
+  password     = "B00TY"
+  unprivileged = true
+
+  // Terraform will crash without rootfs defined
+  rootfs {
+    storage = "local"
+    size    = "4G"
+  }
+
+  network {
+    name   = "eth0"
+    bridge = "vmbr0"
+    ip     = "dhcp"
+  }
+}
+
+
+
+/*
 # Proxmox Full-Clone
 # ---
 # Create a new VM from a clone
@@ -62,3 +86,4 @@ resource "proxmox_vm_qemu" "ns1" {
     # #YOUR-PUBLIC-SSH-KEY
     # EOF
 }
+*/
