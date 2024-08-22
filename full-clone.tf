@@ -7,6 +7,7 @@ resource "proxmox_lxc" "basic" {
   unprivileged = true
   nameserver = "10.77.2.10"
   memory = "128"
+  swap = "128"
   cores = "2"
 
 
