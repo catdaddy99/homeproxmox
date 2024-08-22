@@ -21,7 +21,7 @@ resource "proxmox_lxc" "basic" {
     bridge = "vmbr0"
     ip     = "10.77.2.200/24"
     tag = 2
-    nameserver = "10.77.20.10"
+    nameserver = "10.77.2.10"
   }
 }
 
