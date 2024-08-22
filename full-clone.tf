@@ -2,7 +2,7 @@
 resource "proxmox_lxc" "basic" {
   target_node  = "proxmox1"
   hostname     = "lxc-basic"
-  ostemplate   = "local:ubuntu-23.04-standard_23.04-1_amd64.tar.zst"
+  ostemplate   = "local:vztmpl/ubuntu-23.04-standard_23.04-1_amd64.tar.zst"
   password     = "B00TY"
   unprivileged = true
 
