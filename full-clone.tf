@@ -25,7 +25,7 @@ resource "proxmox_lxc" "basic" {
   network {
     name   = "eth0"
     bridge = "vmbr0"
-    ip     = "10.77.2.200/24"
+    ip     = "10.77.2.10/24"
     tag = 2
     gw = "10.77.2.1"  
   }
