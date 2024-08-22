@@ -6,7 +6,7 @@ resource "proxmox_vm_qemu" "ns1" {
     
     # VM General Settings
     target_node = "proxmox1"
-    vmid = "400"
+    vmid = "100"
     name = "ns1"
     desc = "DNS Name Server 1"
 
