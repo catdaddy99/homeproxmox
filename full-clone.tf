@@ -2,19 +2,19 @@
 # ---
 # Create a new VM from a clone
 
-resource "proxmox_vm_qemu" "srv_demo_1" {
+resource "proxmox_vm_qemu" "ns1" {
     
     # VM General Settings
     target_node = "proxmox1"
-    vmid = "402"
-    name = "srv-demo-402"
-    desc = "TF deploy testing"
+    vmid = "400"
+    name = "ns1"
+    desc = "DNS Name Server 1"
 
     # VM Advanced General Settings
     onboot = true 
 
     # VM OS Settings
-    clone = "Win10-pknowles2"
+    clone = "piholetemplate"
 
     # VM System Settings
     #agent = 1
@@ -25,12 +25,13 @@ resource "proxmox_vm_qemu" "srv_demo_1" {
     cpu = "host"    
     
     # VM Memory Settings
-    memory = 4096
+    memory = 512
 
     # VM Network Settings
     network {
         bridge = "vmbr0"
         model  = "virtio"
+        tag  = 2
     }
 
     # VM Disk Settings - Boot Drive
