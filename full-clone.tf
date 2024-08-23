@@ -10,6 +10,7 @@ resource "proxmox_lxc" "basic" {
   memory = "128"
   swap = "128"
   cores = "2"
+  onboot = "yes"
 
 
   ssh_public_keys = <<-EOT
